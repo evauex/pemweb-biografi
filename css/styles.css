@@ -1,0 +1,126 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Space Grotesk', sans-serif;
+	text-decoration: none;
+}
+
+.team {
+	/* position: relative; */
+	width: 100%;
+	height: 100vh;
+	background: radial-gradient(#281c3e, #0f051d);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.team-content {
+	width: 100%;
+	max-width: 1350px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+	align-items: center;
+	gap: 2rem;
+	text-align: center;
+	margin-top: 4rem;
+}
+
+.team-content img {
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+	margin-bottom: 15px;
+}
+
+.center h1 {
+	color: #fff;
+	font-size: 4rem;
+	text-align: center;
+}
+
+.center h2 {
+	color: #b7b4bb;
+	font-size: 1.5rem;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.box {
+	/* position: relative; */
+	padding: 16px;
+	background: #1b1229;
+	border-radius: 15px;
+	transition: all .38s ease;
+}
+
+.box h3 {
+	font-size: 23px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 8px;
+}
+
+.box h5 {
+	font-size: 15px;
+	font-weight: 600;
+	color: #b7b4bb;
+	margin-bottom: 15px;
+	letter-spacing: 2px;
+}
+
+.icons i {
+	display: inline-block;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 8px;
+	transition: all .38s ease;
+	/* position: relative; */
+}
+
+.icons i:hover {
+	transform: scale(1.2);
+}
+
+.tooltip {
+	position: absolute;
+	top: 100%; /* Positioned below the icon */
+	left: 50%;
+	transform: translateX(-50%);
+	background: #1b1229;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	visibility: hidden; /* Initially hidden */
+	opacity: 0; /* Initially transparent */
+	transition: opacity 0.3s, visibility 0.3s; /* Added transition */
+}
+
+.icons i:hover + .tooltip { /* Show tooltip when hovering over icon */
+	visibility: visible;
+	opacity: 1;
+}
+
+.box:hover {
+	transform: translateY(-10px);
+	cursor: pointer;
+}
+
+@media(max-width: 600px) {
+	.team {
+		width: 100%;
+		height: auto;
+		padding: 90px 2%;
+	}
+
+	.center h1 {
+		font-size: 3.2rem;
+	}
+
+	.team-content {
+		grid-template-columns: repeat(1, minmax(150px, auto));
+	}
+}
