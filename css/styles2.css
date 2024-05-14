@@ -29,7 +29,6 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  /* background-color: #000000; */
   background: radial-gradient(#281c3e, #0f051d);
   z-index: 99;
 }
@@ -93,6 +92,7 @@ ul li a:hover {
 .section {
   background: radial-gradient(#281c3e, #0f051d);
   color: white;
+  padding-top: 100px; /* Add padding-top to the section */
 }
 
 .section__container {
@@ -181,7 +181,7 @@ ul li a:hover {
   border-radius: 100%;
 }
 
-@media (width < 750px) {
+@media (max-width: 750px) {
   nav .checkbox {
     display: block;
   }
@@ -209,7 +209,7 @@ ul li a:hover {
   .section__container {
     padding: 10rem 1rem 5rem 1rem;
     text-align: center;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .image {
